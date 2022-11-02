@@ -2,11 +2,11 @@ var canvas = new fabric.Canvas("myCanvas");
 
 ballY = 0;
 ballX = 0;
-heoleY = 400;
+holeY = 400;
 holeX = 800;
 
-blockImageWidth = 5;
-blockImageHeight = 5;
+blockImageWidth = 40;
+blockImageHeight = 40;
 
 function loadImg()
 {
@@ -77,7 +77,7 @@ function myKeyDown(e)
 	{
         if (ballY >=5)
         {
-            ballY = ballY + blockImageHeight;
+            ballY = ballY - blockImageHeight;
             console.log("Altura da imagem do bloco = " + blockImageHeight);
             console.log("Quando a tecla direcional cima é pressionada, X = " + ballX + ", Y = " + ballY);
             canvas.remove(ballObj);
@@ -101,7 +101,7 @@ function myKeyDown(e)
 	{
 		if(ballX >5)
 		{
-			ballX = ballX + blockImageWidth;
+			ballX = ballX - blockImageWidth;
             console.log("Largura da imagem do bloco = " + blockImageWidth);
             console.log("Quando a tecla direcional esquerda é pressionada, X = " + ballX + ", Y = " + ballY);
             canvas.remove(ballObj);
